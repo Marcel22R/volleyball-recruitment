@@ -5,12 +5,12 @@ import {AuthGuard} from "./helpers/auth.guard";
 import {AdminComponent} from "./component/admin/admin.component";
 import {Role} from "./models/role";
 import {LoginComponent} from "./component/login/login.component";
+import {TeamComponent} from "./component/team/team.component";
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomeComponent,
-    canActivate: [AuthGuard]
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: 'admin',
@@ -22,7 +22,10 @@ const routes: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: '**', redirectTo: ''
+    path: 'team', component: TeamComponent
+  },
+  {
+    path: '**', redirectTo: 'home'
   }
 ];
 

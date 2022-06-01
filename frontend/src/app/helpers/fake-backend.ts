@@ -20,6 +20,7 @@ const users: User[] = [
     firstName: 'Admin',
     secondName: 'Adminovic',
     password: 'admin',
+    zembuiTitle: 'Deppata',
     role: Role.Admin,
     volleyRole: {playing: true, drinking: true}
   },
@@ -29,6 +30,7 @@ const users: User[] = [
     firstName: 'charly',
     secondName: 'brown',
     password: 'user',
+    zembuiTitle:'TrottlBleda',
     role: Role.User,
     volleyRole: {playing: true, drinking: true}
   }
@@ -73,6 +75,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         firstName: user.firstName,
         secondName: user.secondName,
         password: user.password,
+        zembuiTitle:user.zembuiTitle,
         role: user.role,
         volleyRole: {playing: user.volleyRole.playing, drinking: user.volleyRole.drinking},
         token: `fake-jwt-token.${user.id}`

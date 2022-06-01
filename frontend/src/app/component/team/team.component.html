@@ -1,1 +1,6 @@
-<p>team works!</p>
+<h1>Teamspieler</h1>
+<ul>
+  <div class="spacing-within" *ngFor="let user of users">
+    <app-team-person [user]="user"></app-team-person>
+  </div>
+</ul>

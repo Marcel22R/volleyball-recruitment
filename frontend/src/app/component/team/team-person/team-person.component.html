@@ -1,0 +1,20 @@
+<div class="back">
+  <div class="flex-container" *ngIf="user">
+    <div class="img-quote-flex">
+      <img *ngIf="user.pictureUrl" class="picture" src="{{user.pictureUrl}}" alt="">
+      <q style="align-self: center" *ngIf="user.quote">{{user.quote}}</q>
+    </div>
+    <div class="textbox">
+    <h2>Spieler Info: </h2>
+      <div style="margin-left: 3%">
+        <section><strong>Name:</strong> {{user.firstName}} {{user.secondName}}</section>
+        <section><strong>Rolle:</strong> {{user.zembuiTitle}}</section>
+        <section style="display: flex"><strong>Spielend:</strong> &nbsp;
+          <div *ngIf="user.volleyRole.playing">Ja</div>
+          <div *ngIf="!user.volleyRole.playing">Nein</div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+

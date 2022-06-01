@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+  height: min-content;
+  background-image: url("assets/csm_GalleryPic__87__cceeb468f3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.back{
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  margin-top: 5%;
+  box-shadow: rgba(0,0,0,0.2) 0 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+  border-radius: 20px;
+}
+
+img{
+  border-radius: 20px;
+}
