@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.userService.testHttp().subscribe(data => console.log(data));
     this.loading = true;
     this.userService.getById(this.currentUser.id!).pipe(first()).subscribe(user => {
       this.loading = false;

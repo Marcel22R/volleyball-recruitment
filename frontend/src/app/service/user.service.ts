@@ -13,6 +13,10 @@ export class UserService {
 
   }
 
+  testHttp():Observable<any>{
+    return this.http.get(`${environment.apiUrl}/resource`);
+  }
+
   getAll(): Observable<User[]> {
     return this.http.get<User[]>(`${environment.apiUrl}/users`);
   }

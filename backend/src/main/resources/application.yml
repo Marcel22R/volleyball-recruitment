@@ -1,0 +1,29 @@
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    root: INFO
+  file:
+    name: ./log/zembui.log
+  logback:
+    rollingpolicy:
+      max-history: 30
+      file-name-pattern: ./log/zembui-%d{yyyy-MM-dd}.%i.log
+spring:
+  application:
+    name: zembui
+  datasource:
+    url: "jdbc:h2:./zembuidb;AUTO_SERVER=TRUE;"
+    username: "sa"
+    password: ""
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties.hibernate.dialect: org.hibernate.dialect.H2Dialect
+server:
+  port: 8080
+  error:
+    include-message: always

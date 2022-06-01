@@ -6,7 +6,6 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 // this configuration effectively disables CORS; this is a helpful during development but a bad idea in production
-@Profile("!prod")
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
